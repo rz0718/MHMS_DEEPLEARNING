@@ -13,8 +13,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error
 import logging
 from sklearn.preprocessing import MinMaxScaler
 
-FOLD_NAMES = ['c1', 'c4', 'c6']
-log = "tool_wear_sensing.log"
+log = "output.log"
 logging.basicConfig(filename=log,level=logging.DEBUG,format='%(asctime)s %(message)s', datefmt='%d/%m/%Y %H:%M:%S')
 if __name__ == '__main__':
 	for time in range(5):
