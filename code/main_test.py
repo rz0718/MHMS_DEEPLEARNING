@@ -18,11 +18,11 @@ logging.basicConfig(filename=log,level=logging.DEBUG,format='%(asctime)s %(messa
 if __name__ == '__main__':
 	for time in range(5):
 		idx_test = 1
-		logging.info("conducting exp. on dataset: %s" %FOLD_NAMES[idx_test])
-
+		logging.info("conducting exp.")
 		t = load_data(True)
 		X_train, y_train, X_test, y_test = t[0], t[1], t[2], t[3]
 		data_dim = X_train.shape[1]
+    	
     	#liner svm
 		linear_svr = build_SVR('linear')
 		linear_svr.fit(X_train, y_train)
@@ -68,17 +68,17 @@ if __name__ == '__main__':
 		mae_score = mean_absolute_error(y_pred, y_test)
 		logging.info("   denoise ae result: %f_%f" %(score, mae_score))
 
-		"""
-		NUM_BPEPOCHRBM = 200
+		# rbf using sigmoid function, feature should be scaled to -1 and 1
 		scaler = MinMaxScaler()
 		X_train_rbm = scaler.fit_transform(X_train)
-		rbm = build_RBM(NUM_BPEPOCHRBM, NUM_PREEPOCH, batch_size=BATH_SIZE)
+		rbm = build_RBM(NUM_BPEPOCH, NUM_PREEPOCH, batch_size=BATH_SIZE)
 		rbm.fit(X_train_rbm, y_train)
 		X_test_rbm = scaler.transform(X_test)
 		y_pred = rbm.predict(X_test_rbm)
 		score = mean_squared_error(y_pred, y_test)
-		logging.info("   rbm result: %f" %score)
-		"""
+		mae_score = mean_absolute_error(y_pred, y_test)
+		logging.info("   rbm result: %f_%f" %(score, mae_score))
+
 		t = load_data(False)
 		X_train, y_train, X_test, y_test = t[0], t[1], t[2], t[3]
 		data_dim = X_train.shape[2]
