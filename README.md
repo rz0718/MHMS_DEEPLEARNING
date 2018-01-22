@@ -1,4 +1,4 @@
-# Deep Learning and Its Applications to Machine Health Monitoring: A Survey
+# Deep Learning and Its Applications to Machine Health Monitoring
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ This folder contains two pickle files, which are extracted features and labels f
 - data_normal: each data sample is a vector. The features are extracted from the whole time sequences. 
 - data_seq: each data sample is a tensor. The features are extracted from windows of the time time sequences. 
 
-Especially, data_seq can be used by LSTM and CNN models. 
+Especially, data_seq can be used by LSTM and CNN models. ß
 
 ## Code
 This folder contains codes for feature extractions, traditional machine learning models, deep learning models and test modules. 
