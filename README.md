@@ -42,5 +42,5 @@ To replicate the results reported in paper (python 2.7)
 pip install -r requirement 
 python main_test.py
 ```
-The results will be store in output.log
+The results will be stored in output.log. In addition, a python notebook file is provided to parse log file for mean and std accuracies computing. 
 
