@@ -30,7 +30,7 @@ This folder contains codes for feature extractions, traditional machine learning
 RMS, VAR, MAX, Peak, Skew, Kurt, Wavelet, Spectral Kurt, Spectral Skewness, Spectral Powder features are extracted from the input time series. 
 
 ### Deep Learning Models
-Based on Keras, autoencoder and its variants, LSTM, Bi-directional LSTM and CNN models are provided
+Based on Keras, autoencoder and its variants, DBN, LSTM, Bi-directional LSTM and CNN models are provided
 
 ### Traditioanl Machine Learning Models
 SVR with two kernels (linear and rbf), Random Forest and Neural Network are provided.
