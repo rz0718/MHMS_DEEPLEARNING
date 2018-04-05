@@ -116,14 +116,11 @@ def short_data(data_x, data_y):
 
 
 def main():
-	# Get the dataset from http://ai.stanford.edu/~amaas/data/sentiment/
-
+	
 	x = cPickle.load(open("../data/cwru.p","rb"))
 	data_x, data_y = x[0], x[1]
 	print 'data loaded'
 	new_data_x, new_data_y = short_data(data_x, data_y)
-	#cPickle.dump([new_data_x, new_data_y], open('cwru_sensory.p', "wb"))
-	
 	data_time = gen_fea(new_data_x)
 	data_normal = gen_fea(new_data_x, 1)
 	len_data = data_normal.shape[0]
