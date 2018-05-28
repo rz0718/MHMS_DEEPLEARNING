@@ -1,6 +1,6 @@
 # Deep Learning and Its Applications to Machine Health Monitoring
 
-This module contain the code used in our survey paper: 'Deep Learning and Its Applications to Machine Health Monitoring'.
+This module contain the code used in our survey paper: `Deep Learning and Its Applications to Machine Health Monitoring`.
 
 ## Table of Contents
 
