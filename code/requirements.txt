@@ -17,4 +17,4 @@ six==1.11.0
 sklearn==0.0
 tensorflow-gpu==1.3.0
 tensorflow-tensorboard==0.1.8
-Werkzeug==0.13
+Werkzeug==0.15.3
