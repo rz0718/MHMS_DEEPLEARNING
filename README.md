@@ -1,6 +1,6 @@
 # Deep Learning and Its Applications to Machine Health Monitoring
 
-This module contain the code used in our survey paper: [Deep Learning and Its Applications to Machine Health Monitoring](https://www.researchgate.net/publication/311839720_Deep_Learning_and_Its_Applications_to_Machine_Health_Monitoring_A_Survey). It has been accepted by [Mechanical Systems and Signal Processing](https://www.journals.elsevier.com/mechanical-systems-and-signal-processing). Pls find the newest version there. 
+This module contains the code used in our survey paper: [Deep Learning and Its Applications to Machine Health Monitoring](https://www.researchgate.net/publication/311839720_Deep_Learning_and_Its_Applications_to_Machine_Health_Monitoring_A_Survey). It has been accepted by [Mechanical Systems and Signal Processing](https://www.journals.elsevier.com/mechanical-systems-and-signal-processing). Pls find the newest version there. 
 
 ## Table of Contents
 
