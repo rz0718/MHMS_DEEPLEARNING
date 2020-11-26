@@ -1,10 +1,8 @@
 backports.weakref==1.0.post1
 bleach==1.5.0
-deep-belief-network==1.0.1
 funcsigs==1.0.2
 html5lib==0.9999999
 Keras==2.0.8
-keras-extensions==0.1
 Markdown==2.6.10
 mock==2.0.0
 numpy==1.13.3
@@ -15,6 +13,9 @@ scikit-learn==0.19.1
 scipy==1.0.0
 six==1.11.0
 sklearn==0.0
-tensorflow-gpu==1.3.0
+tensorflow-gpu==1.13.1
 tensorflow-tensorboard==0.1.8
 Werkzeug==0.13
+
+deep-belief-network==1.0.1
+keras-extensions==0.1

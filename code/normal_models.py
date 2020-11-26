@@ -1,7 +1,7 @@
 from numpy.random import seed
 seed(10132017)
-from tensorflow import set_random_seed
-set_random_seed(18071991)
+from tensorflow.random import set_seed
+set_seed(18071991)
 from keras.models import Sequential
 from sklearn.svm import SVR
 from keras.layers.core import Flatten, Dense, Dropout, Activation
