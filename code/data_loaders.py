@@ -8,7 +8,7 @@ def load_data(normal_stat=False):
         filepath = "../data/data_normal.p"
     else:
         filepath = "../data/data_seq.p" 
-    x = pickle.load(open(filepath,'rb'),encoding="latin1")
+    x = pickle.load(open(filepath,"rb"),encoding="latin1")
     return [x[0], x[1], x[2], x[3]]  # retrun train_x, train_y, test_x, test_y
 
 if __name__ == '__main__':
