@@ -1,13 +1,13 @@
 from numpy.random import seed
 seed(10132017)
-from tensorflow import set_random_seed
-set_random_seed(18071991)
+from tensorflow.random import set_seed
+set_seed(18071991)
 from keras.models import Sequential
 from keras.layers import LSTM, Bidirectional
 from keras.layers.core import Flatten, Dense, Dropout
 from keras.layers import Input, Dense, Flatten
 from keras.layers import Conv1D,MaxPooling1D
-from dbn.tensorflow import SupervisedDBNRegression
+# from dbn.tensorflow import SupervisedDBNRegression
 
 dropout_rate = 0.2
 FINAL_DIM = 900 
@@ -86,14 +86,12 @@ def build_pre_denoiseAE(data_dim, X_train, epoch_pretrain=25,  hidDim=[100,140])
     return model
 
 
-
-
-def build_RBM(num_bp, epoch_pretrain=25, batch_size=24, hidDim=[100,140]):
-    regressor = SupervisedDBNRegression(hidden_layers_structure=hidDim,
-                                    learning_rate_rbm=0.01,
-                                    learning_rate=0.01,
-                                    n_epochs_rbm=epoch_pretrain,
-                                    n_iter_backprop=num_bp,
-                                    batch_size=batch_size,
-                                    activation_function='tanh')
-    return regressor
+# def build_RBM(num_bp, epoch_pretrain=25, batch_size=24, hidDim=[100,140]):
+#     regressor = SupervisedDBNRegression(hidden_layers_structure=hidDim,
+#                                     learning_rate_rbm=0.01,
+#                                     learning_rate=0.01,
+#                                     n_epochs_rbm=epoch_pretrain,
+#                                     n_iter_backprop=num_bp,
+#                                     batch_size=batch_size,
+#                                     activation_function='tanh')
+    # return regressor

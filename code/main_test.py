@@ -4,10 +4,10 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 from numpy.random import seed
 seed(10132017)
-from tensorflow import set_random_seed
-set_random_seed(18071991)
+from tensorflow.random import set_seed
+set_seed(18071991)
 from data_loaders import load_data
-from dl_models import build_BILSTM, build_LSTM, build_CNN, build_pre_normalAE, build_pre_denoiseAE, build_RBM
+from dl_models import build_BILSTM, build_LSTM, build_CNN, build_pre_normalAE, build_pre_denoiseAE
 from normal_models import build_SVR, build_RF, build_NN
 from sklearn.metrics import mean_squared_error, mean_absolute_error 
 import logging
@@ -69,15 +69,15 @@ if __name__ == '__main__':
 		mae_score = mean_absolute_error(y_pred, y_test)
 		logging.info("   denoise ae result: %f_%f" %(score, mae_score))
 		# rbf using sigmoid function, feature should be scaled to -1 and 1
-		scaler = MinMaxScaler()
-		X_train_rbm = scaler.fit_transform(X_train)
-		rbm = build_RBM(NUM_BPEPOCH, NUM_PREEPOCH, batch_size=BATH_SIZE)
-		rbm.fit(X_train_rbm, y_train)
-		X_test_rbm = scaler.transform(X_test)
-		y_pred = rbm.predict(X_test_rbm)
-		score = mean_squared_error(y_pred, y_test)
-		mae_score = mean_absolute_error(y_pred, y_test)
-		logging.info("   dbn result: %f_%f" %(score, mae_score))
+# 		scaler = MinMaxScaler()
+# 		X_train_rbm = scaler.fit_transform(X_train)
+# 		rbm = build_RBM(NUM_BPEPOCH, NUM_PREEPOCH, batch_size=BATH_SIZE)
+# 		rbm.fit(X_train_rbm, y_train)
+# 		X_test_rbm = scaler.transform(X_test)
+# 		y_pred = rbm.predict(X_test_rbm)
+# 		score = mean_squared_error(y_pred, y_test)
+# 		mae_score = mean_absolute_error(y_pred, y_test)
+# 		logging.info("   dbn result: %f_%f" %(score, mae_score))
 		#Bi-directional LSTM
 		t = load_data(False)
 		X_train, y_train, X_test, y_test = t[0], t[1], t[2], t[3]
